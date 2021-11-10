@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Grid</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+
+    <style>
+        body {
+            background-color: #444;
+            color: #fffff8;
+            font-size: 27px;
+        }
+        
+        .container {
+            display: grid;
+            width: 80vw;
+            height: 100vh;
+            margin: auto;
+            padding: 10px;
+            /* grid-template-rows: 350px 350px 1fr 1fr; */
+            /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(6, 1fr); */
+            grid-auto-rows: minmax(50px, 100px);
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+            border: 2px solid rgb(247, 182, 96);
+            justify-content: center;
+        }
+        
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid white;
+            padding: 5px;
+        }
+        
+        .text {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: lighter;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        #one {}
+        
+        #two {}
+        
+        #three {}
+        
+        #four {}
+        
+        #five {}
+        
+        #six {}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="one" class="box text"> One </div>
+        <div id="two" class="box text"> Two </div>
+        <div id="three" class="box text"> Three </div>
+        <div id="four" class="box text"> Four </div>
+        <div id="five" class="box text"> Five </div>
+        <div id="six" class="box text"> Six </div>
+    </div>
+</body>
+
+</html>
