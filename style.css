@@ -32,10 +32,14 @@ body {
 }
 
 .text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 12px, Palatino, Georgia, serif;
     font-weight: lighter;
-    font-size: 1rem;
     color: white;
+}
+
+.blog-title {
+    font: 20px Verdana, Geneva, Tahoma, sans-serif;
+    height: 35px;
 }
 
 .header {
@@ -67,7 +71,7 @@ body {
     border: 1px solid white;
 }
 
-.photoBox {
+.blogBox {
     align-items: center;
     justify-content: center;
     width: 350px;
@@ -75,39 +79,17 @@ body {
     margin: 10px;
     padding: 10px;
     border: 1px solid white;
-    background-color: #777777;
+    /* background-color: #777777; */
+    background-color: #ddd;
 }
 
 a {
     color: white;
+    text-decoration: none;
 }
 
 a:hover {
     color: grey;
-}
-
-#one {
-    background-image: url('images/DSC_0422.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#two {
-    background-image: url('images/DSC_0422.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#three {
-    background-image: url('images/DSC_0422.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#four {
-    background-image: url('images/DSC_0422.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 @media(min-width:1100px) {
@@ -128,9 +110,7 @@ a:hover {
         "sd main main main main main main main"/**/
         "ft ft ft ft ft ft ft ft";
     }
-}
-
-@media(min-width:1100px) {
+    
     #nestedGrid {
         grid-area: main;
         display: grid;
@@ -139,6 +119,7 @@ a:hover {
         grid-gap: 5px;
         border: 1px solid white;
     }
+    
     .content {
         grid-area: main;
         background-image: url('images/DSC_0422.jpg');
