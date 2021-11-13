@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Demo 1</title>
+    <title>blogspace</title>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
     <link rel="stylesheet" href="style.css">
@@ -10,21 +10,29 @@
 
 <body>
     <div class="container">
-        <div class="header box">
-            <h1>The Beauty Of Nature Brings Us All Home</h1>
+        <div class="header">
+            <div id="nestedHeaderGrid">
+                <div id="main-title">blogspace</div>
+                <div id="nestedMenuGrid">
+                    <div id="main" class="headerMenu"><a href="post.html">main</a> / </div>
+                    <div id="authors" class="headerMenu"><a href="post.html">authors</a> / </div>
+                    <div id="popular" class="headerMenu"><a href="post.html">popular</a> / </div>
+                    <div id="about" class="headerMenu"><a href="post.html">about</a></div>
+                </div>
+                <div id="header-line" class="line"></div>
+            </div>
         </div>
         <div class="sidebar box">
             <div>
-                <h3 class="main-title">Last published</h3>
+                <h3 class="last-published">Last published</h3>
                 <div class="blog-title"><a href="post.html">Blog title 1</a></div>
                 <div class="blog-title"><a href="post.html">Blog title 2</a></div>
                 <div class="blog-title"><a href="post.html">Blog title 3</a></div>
                 <div class="blog-title"><a href="post.html">Blog title 4</a></div>
             </div>
-            <div><a href="post.html">Post</a></div>
         </div>
         <div class="content box">
-            <div id="nestedGrid">
+            <div id="nestedContentGrid">
                 <div id="one" class="blogBox"></div>
                 <div id="two" class="blogBox"></div>
                 <div id="three" class="blogBox"></div>
