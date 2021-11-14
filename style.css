@@ -50,9 +50,21 @@ body {
 
 } */
 
+.blog-sample {
+  height: 90%;
+}
+
 .blog-title {
-  font: 20px Verdana, Geneva, Tahoma, sans-serif;
-  height: 35px;
+  font: 16px Verdana, Geneva, Tahoma, sans-serif;
+  height: 100px;
+  text-transform: uppercase;
+}
+
+.blog-intro {
+  font: 12px Verdana, Geneva, Tahoma, sans-serif;
+  height: 100px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 10px;
 }
 
 .header {
@@ -145,7 +157,7 @@ body {
 
 .sidebar {
   grid-area: sd;
-  display: grid;
+  display: flex;
 }
 
 .content {
