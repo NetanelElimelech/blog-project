@@ -23,17 +23,9 @@ body {
     "ft";
 }
 
-#nestedGrid {
-  grid-area: main;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 25% 25% 25% 25%;
-  grid-gap: 5px;
-  border: 1px solid white;
-}
-
 .box {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   border: 1px solid #000;
@@ -46,17 +38,14 @@ body {
   color: #fff;
 }
 
-/* .blogHeader {
-
-} */
-
-.blog-sample {
+.blog-samples {
   height: 90%;
+  align-items: top;
 }
 
 .blog-title {
   font: 16px Verdana, Geneva, Tahoma, sans-serif;
-  height: 100px;
+  height: 30px;
   text-transform: uppercase;
 }
 
@@ -67,6 +56,11 @@ body {
   margin-bottom: 10px;
 }
 
+.more {
+  font-size: 14px;
+  text-align: right;
+}
+
 .header {
   grid-area: hd;
   display: grid;
@@ -74,24 +68,23 @@ body {
   grid-template-columns: 100%;
   grid-template-areas: "header";
   grid-gap: 5px;
-  /* align-items: center; */
   justify-content: center;
 }
 
 #nestedHeaderGrid {
-    grid-area: header;
-    display: grid;
-    height: 100px;
-    width: auto;
-    grid-template-rows: 40% 40% 20%;
-    grid-template-columns: 100%;
-    grid-template-areas:
+  grid-area: header;
+  display: grid;
+  height: 100px;
+  width: auto;
+  grid-template-rows: 40% 40% 20%;
+  grid-template-columns: 100%;
+  grid-template-areas:
     "header-top"
     "header-middle"
     "header-bottom";
-    align-items: center;
-    justify-content: center;
-  }
+  align-items: center;
+  justify-content: center;
+}
 
 #nestedMenuGrid {
   grid-area: header-middle;
@@ -100,8 +93,7 @@ body {
   width: 100%;
   grid-template-rows: 50%;
   grid-template-columns: auto auto auto auto;
-  grid-template-areas:/**/
-  "menu1 menu2 menu3 menu4";
+  grid-template-areas:/**/ "menu1 menu2 menu3 menu4";
   align-content: center;
   justify-content: center;
 }
@@ -114,6 +106,7 @@ body {
   grid-area: header-top;
   text-align: center;
   height: 50%;
+  color: #00b;
 }
 
 .line {
@@ -162,6 +155,7 @@ body {
 
 .content {
   grid-area: main;
+  position: relative;
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -198,30 +192,6 @@ a:hover {
   color: orangered;
 }
 
-/* #one {
-    background-image: url('images/DSC_0422.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#two {
-    background-image: url('images/DSC_0422.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#three {
-    background-image: url('images/DSC_0422.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#four {
-    background-image: url('images/DSC_0422.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
-
 /* MEDIA QUERIES */
 
 @media (min-width: 1100px) {
@@ -230,7 +200,7 @@ a:hover {
     width: 90%;
     margin: auto;
     padding: 15px;
-    border: 2px solid #000;
+    /*     border: 2px solid #000; */
     justify-content: center;
     grid-template-rows: 100px 700px 30px;
     grid-gap: 15px;
@@ -243,21 +213,53 @@ a:hover {
       "ft ft ft ft ft ft ft ft";
   }
 
-  #nestedContentGrid {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    grid-gap: 5px;
-    border: 1px solid #000;
-  }
-
   .content {
     grid-area: main;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+      "content-top"
+      "content-bottom";
     background-image: url("images/DSC_0422.jpg");
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  #daily-choice {
+    grid-area: content-top;
+    text-align: center;
+  }
+
+  /*   #nestedContentGrid {
+    grid-area: content-bottom;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "left right";
+    grid-gap: 5px;
+    border: 1px solid #000;
+  } */
+
+  .flexible {
+    grid-area: content-bottom;
+    display: flex;
+    width: 350%;
+    height: 95%;
+    border: 10px solid black;
+  }
+
+  .blogBox {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: auto;
+    height: 90%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: #fff;
   }
 }
 
