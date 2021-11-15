@@ -13,14 +13,13 @@ body {
   border: 2px solid #000;
   justify-content: center;
   grid-template-columns: 1fr;
-  grid-template-rows: 250 1fr 1fr;
+  grid-template-rows: 250 1fr;
   grid-gap: 15px;
   grid-auto-rows: minmax(50px, auto);
   grid-template-areas: /**/
     "hd" /**/
     "sd" /**/
-    "main" /**/
-    "ft";
+    "main";
 }
 
 .box {
@@ -36,6 +35,8 @@ body {
   color: #fff;
 }
 
+/* LAST PUBLISHED */
+
 .blog-samples {
   height: 90%;
   align-items: top;
@@ -43,20 +44,26 @@ body {
 
 .blog-title {
   font: 16px Verdana, Geneva, Tahoma, sans-serif;
-  height: 30px;
+  height: 20px;
   text-transform: uppercase;
 }
 
 .blog-intro {
   font: 12px Verdana, Geneva, Tahoma, sans-serif;
-  height: 100px;
+  height: 70px;
   border-bottom: 1px solid #000;
+  padding-bottom: 15px;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .more {
-  font-size: 14px;
+  font: 12px Verdana, Geneva, Tahoma, sans-serif;
   text-align: right;
+}
+
+.by-writer {
+  font: 14px Palatino, Georgia, serif;
 }
 
 .header {
@@ -114,6 +121,7 @@ body {
 .section-title {
   align-self: center;
   text-align: center;
+  margin: 0 0 20px 0;
 }
 
 /* MENU */
@@ -205,15 +213,14 @@ a:hover {
     padding: 15px;
     /*     border: 2px solid #000; */
     justify-content: center;
-    grid-template-rows: 100px 700px 30px;
+    grid-template-rows: 100px 730px;
     grid-gap: 15px;
     grid-auto-rows: minmax(50px, auto);
     grid-template-columns: 10% 80%;
     grid-template-columns: repeat(8, 1fr);
     grid-template-areas: /**/
       "hd hd hd hd hd hd hd hd" /**/
-      "sd main main main main main main main" /**/
-      "ft ft ft ft ft ft ft ft";
+      "sd main main main main main main main";
   }
 
   .content {
@@ -238,26 +245,34 @@ a:hover {
     color: #fff;
   }
 
-  .flexible {
+  .content-inner {
     grid-area: content-bottom;
     display: flex;
     width: 100%;
     height: 100%;
     align-items: center;
     justify-self: center;
-    border: 1px solid black;
+    border: 1px solid white;
   }
 
   .blogBox {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 50%;
-    height: 90%;
-    margin: 20px;
-    padding: 10px;
+    width: 40%;
+    height: 78%;
+    margin: 0 60px 0 60px;
+    padding: 0 20px 20px 20px;
     border: 1px solid #000;
     background-color: #fff;
+    font: 14px/1.4 Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+  }
+
+  .truncated-choice {
+    height: 75%;
+    margin-bottom: 10px;
+    overflow: hidden;
   }
 }
 
@@ -269,14 +284,13 @@ a:hover {
     padding: 15px;
     border: 1.5px solid #000;
     justify-content: center;
-    grid-template-rows: 100px 700px 30px;
+    grid-template-rows: 100px 730px;
     grid-gap: 15px;
     grid-auto-rows: minmax(50px, auto);
     grid-template-columns: 10% 80%;
     grid-template-columns: repeat(8, 1fr);
     grid-template-areas: /**/
       "hd hd hd hd hd hd hd hd" /**/
-      "sd sd main main main main main main" /**/
-      "ft ft ft ft ft ft ft ft";
+      "sd sd main main main main main main";
   }
 }
