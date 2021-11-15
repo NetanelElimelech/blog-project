@@ -36,12 +36,6 @@ body {
   padding-bottom: 10px;
 }
 
-.text {
-  font: 12px, Palatino, Georgia, serif;
-  font-weight: lighter;
-  color: #fff;
-}
-
 .to-main {
   font: 12px Verdana, Geneva, Tahoma, sans-serif;
   text-align: left;

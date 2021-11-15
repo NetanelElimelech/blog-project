@@ -4,27 +4,8 @@ body {
   font-size: 27px;
 }
 
-.container {
-  display: grid;
-  width: 90%;
-  height: 100%;
-  margin: auto;
-  padding: 15px;
-  border: 2px solid #000;
-  justify-content: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: 250px 1fr;
-  grid-gap: 15px;
-  grid-auto-rows: minmax(50px, auto);
-  grid-template-areas: /**/
-    "hd" /**/
-    "sd" /**/
-    "main";
-}
-
 .box {
   display: flex;
-  position: relative;
   border: 1px solid #000;
   padding: 10px;
 }
@@ -38,7 +19,7 @@ body {
 /* LAST PUBLISHED */
 
 .blog-samples {
-  height: 90%;
+  height: fit-content;
   align-items: top;
 }
 
@@ -200,6 +181,74 @@ a:hover {
 }
 
 /* MEDIA QUERIES */
+
+@media (max-width: 1099px) {
+  .container {
+    display: grid;
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #000;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px fit-content fit-content;
+    grid-gap: 15px;
+    grid-template-areas: /**/
+      "hd" /**/
+      "sd" /**/
+      "main";
+  }
+
+  .box {
+    border: 1px solid #000;
+    padding: 10px;
+  }
+
+  .content {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 10% fit-content;
+    grid-template-areas:
+      "content-top"
+      "content-bottom";
+    align-items: top;
+  }
+
+  #daily-choice {
+    grid-area: content-top;
+    width: 50%;
+    text-align: center;
+    justify-self: center;
+    color: #000;
+  }
+
+  .content-inner {
+    grid-area: content-bottom;
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    justify-self: center;
+    border: 1px solid white;
+  }
+
+  .blogBox {
+    justify-self: center;
+    width: 90%;
+    height: 78%;
+    padding: 0 20px 20px 20px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font: 14px/1.4 Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+  }
+
+  .truncated-choice {
+    height: 75%;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+}
 
 @media (min-width: 1100px) {
   .container {
