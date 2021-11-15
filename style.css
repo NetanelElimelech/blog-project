@@ -47,6 +47,8 @@ body {
   font: 14px Palatino, Georgia, serif;
 }
 
+/* HEADER*/
+
 .header {
   grid-area: hd;
   display: grid;
@@ -84,10 +86,6 @@ body {
   justify-content: center;
 }
 
-/* HEADER */
-
-/* TITLE */
-
 #main-title {
   grid-area: header-top;
   text-align: center;
@@ -105,7 +103,7 @@ body {
   margin: 0 0 20px 0;
 }
 
-/* MENU */
+/* HEADER MENU */
 
 #main {
   grid-area: menu1;
@@ -136,10 +134,14 @@ body {
   font: 16px Palatino, Georgia, serif;
 }
 
+/* SIDEBAR */
+
 .sidebar {
   grid-area: sd;
   display: flex;
 }
+
+/* CONTENT SECTION*/
 
 .content {
   grid-area: main;
