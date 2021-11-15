@@ -7,26 +7,33 @@ body {
 .container {
   display: grid;
   width: 90%;
-  height: 100%;
+  height: fit-content;
   margin: auto;
   padding: 15px;
-  border: 2px solid #000;
-  justify-content: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: 250px 1fr;
+  border: 1px solid #000;
+  grid-template-rows: 10% fit-content;
   grid-gap: 15px;
   grid-auto-rows: minmax(50px, auto);
   grid-template-areas: /**/
     "hd" /**/
-    "sd" /**/
     "main";
 }
 
-.box {
-  display: flex;
-  position: relative;
+.blogBox {
+  grid-area: main;
+  align-self: top;
+  width: 90%;
+  height: fit-content;
+  padding: 0 20px 0 20px;
   border: 1px solid #000;
-  padding: 10px;
+  background-color: #fff;
+  font: 14px/1.4 Verdana, Geneva, Tahoma, sans-serif;
+  text-align: justify;
+}
+
+.post {
+  height: fit-content;
+  padding-bottom: 10px;
 }
 
 .text {
@@ -35,45 +42,15 @@ body {
   color: #fff;
 }
 
-/* LAST PUBLISHED */
-
-.blog-samples {
-  height: 90%;
-  align-items: top;
-}
-
-.blog-title {
-  font: 16px Verdana, Geneva, Tahoma, sans-serif;
-  height: 20px;
-  text-transform: uppercase;
-}
-
-.blog-intro {
+.to-main {
   font: 12px Verdana, Geneva, Tahoma, sans-serif;
-  height: 70px;
-  border-bottom: 1px solid #000;
-  padding-bottom: 15px;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-
-.more {
-  font: 12px Verdana, Geneva, Tahoma, sans-serif;
-  text-align: right;
+  text-align: left;
+  padding-bottom: 10px;
 }
 
 .by-writer {
   font: 14px Palatino, Georgia, serif;
-}
-
-.header {
-  grid-area: hd;
-  display: grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 100%;
-  grid-template-areas: "header";
-  grid-gap: 5px;
-  justify-content: center;
+  text-align: center;
 }
 
 #nestedHeaderGrid {
@@ -118,10 +95,8 @@ body {
   border-bottom: 1px solid orangered;
 }
 
-.section-title {
-  align-self: center;
+h2 {
   text-align: center;
-  margin: 0 0 20px 0;
 }
 
 /* MENU */
@@ -155,39 +130,6 @@ body {
   font: 16px Palatino, Georgia, serif;
 }
 
-.sidebar {
-  grid-area: sd;
-  display: flex;
-}
-
-.content {
-  grid-area: main;
-  position: relative;
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#nestedContentGrid {
-  grid-area: main;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 25% 25% 25% 25%;
-  grid-gap: 5px;
-  border: 1px solid #000;
-}
-
-.blogBox {
-  align-items: center;
-  justify-content: center;
-  width: 350px;
-  height: 250px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #000;
-  background-color: #fff;
-}
-
 /* LINKS */
 
 a {
@@ -211,51 +153,23 @@ a:hover {
     grid-template-rows: 100px 730px;
     grid-gap: 15px;
     grid-auto-rows: minmax(50px, auto);
-    grid-template-columns: 10% 80%;
-    grid-template-columns: repeat(8, 1fr);
     grid-template-areas: /**/
-      "hd hd hd hd hd hd hd hd" /**/
-      "sd main main main main main main main";
+      "hd" /**/
+      "main";
   }
 
   .content {
     grid-area: main;
-    display: grid;
-    grid-template-rows: 10% 90%;
-    grid-template-areas:
-      "content-top"
-      "content-bottom";
-    background-image: url("images/DSC_0422.jpg");
-    background-size: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    align-items: center;
-  }
-
-  #daily-choice {
-    grid-area: content-top;
-    text-align: center;
-    width: 50%;
-    justify-self: center;
-    color: #fff;
-  }
-
-  .content-inner {
-    grid-area: content-bottom;
     display: flex;
-    width: 100%;
-    height: 100%;
     align-items: center;
-    justify-self: center;
-    border: 1px solid white;
   }
 
   .blogBox {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 40%;
-    height: 78%;
+    width: 90%;
+    height: 90%;
     margin: 0 60px 0 60px;
     padding: 0 20px 20px 20px;
     border: 1px solid #000;
@@ -264,10 +178,14 @@ a:hover {
     text-align: justify;
   }
 
-  .truncated-choice {
-    height: 75%;
+  .post {
+    height: 80%;
     margin-bottom: 10px;
-    overflow: hidden;
+  }
+
+  .columns {
+    column-count: 3;
+    column-gap: 20px;
   }
 }
 
@@ -282,10 +200,8 @@ a:hover {
     grid-template-rows: 100px 730px;
     grid-gap: 15px;
     grid-auto-rows: minmax(50px, auto);
-    grid-template-columns: 10% 80%;
-    grid-template-columns: repeat(8, 1fr);
     grid-template-areas: /**/
-      "hd hd hd hd hd hd hd hd" /**/
-      "sd sd main main main main main main";
+      "hd" /**/
+      "main";
   }
 }
