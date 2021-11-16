@@ -1,0 +1,32 @@
+.last-published-title {
+    align-self: center;
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+  
+  .sidebar {
+    grid-area: sd;
+    display: flex;
+    height: fit-content;
+  }
+
+  .blog-samples {
+    height: fit-content;
+    align-items: top;
+  }
+  
+  .blog-title {
+    font: 16px Verdana, Geneva, Tahoma, sans-serif;
+    height: fit-content;
+    text-transform: uppercase;
+  }
+  
+  .blog-intro {
+    font: 12px Verdana, Geneva, Tahoma, sans-serif;
+    height: fit-content;
+    border-bottom: 1px solid #000;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  

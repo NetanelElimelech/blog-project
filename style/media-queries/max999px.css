@@ -1,0 +1,64 @@
+@media (max-width: 999px) {
+  .container {
+    display: grid;
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #000;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px fit-content fit-content 30px;
+    grid-gap: 15px;
+    grid-template-areas: /**/
+      "hd" /**/
+      "sd" /**/
+      "main"
+      "ft";
+  }
+
+  .content {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 10% fit-content;
+    grid-template-areas:
+      "content-top"
+      "content-bottom";
+    align-items: top;
+  }
+
+  #daily-choice {
+    grid-area: content-top;
+    width: 50%;
+    text-align: center;
+    justify-self: center;
+    color: #000;
+  }
+
+  .content-inner {
+    grid-area: content-bottom;
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    justify-self: center;
+    border: 1px solid white;
+  }
+
+  .blogbox {
+    align-self: center;
+    justify-self: center;
+    width: 90%;
+    height: fit-content;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font: 14px/1.4 Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+  }
+
+  .our-choice {
+    height: fit-content;
+    margin-bottom: 10px;
+  }
+}

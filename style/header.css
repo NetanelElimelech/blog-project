@@ -1,0 +1,74 @@
+.header {
+    grid-area: hd;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    grid-template-areas: "header";
+    grid-gap: 5px;
+    justify-content: center;
+  }
+  
+  #nestedHeaderGrid {
+    grid-area: header;
+    display: grid;
+    height: 100px;
+    width: auto;
+    grid-template-rows: 40% 40% 20%;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header-top"
+      "header-middle"
+      "header-bottom";
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #nestedMenuGrid {
+    grid-area: header-middle;
+    display: grid;
+    height: 50%;
+    width: 100%;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas: "menu1 menu2 menu3 menu4";
+    align-content: center;
+    justify-content: center;
+  }
+  
+  #main-title {
+    grid-area: header-top;
+    text-align: center;
+    height: 50%;
+    color: #00b;
+  }
+
+  /* HEADER MENU */
+
+#main {
+    grid-area: menu1;
+    text-align: center;
+  }
+  
+  #header-line {
+    grid-area: header-bottom;
+    border-bottom: 1px solid orangered;
+  }
+  
+  #authors {
+    grid-area: menu2;
+    text-align: center;
+  }
+  
+  #popular {
+    grid-area: menu3;
+    text-align: center;
+  }
+  
+  #about {
+    grid-area: menu4;
+    text-align: center;
+  }
+  
+  .headerMenu {
+    display: flex;
+    font: 16px Palatino, Georgia, serif;
+  }

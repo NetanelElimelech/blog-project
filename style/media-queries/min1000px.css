@@ -1,0 +1,68 @@
+@media (min-width: 1000px) {
+  .container {
+    display: grid;
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+    padding: 15px;
+    justify-content: center;
+    grid-template-rows: 90px fit-content;
+    grid-gap: 15px;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-columns: 10% 80%;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: /**/
+      "hd hd hd hd hd hd hd hd" /**/
+      "sd sd main main main main main main";
+  }
+
+  .content {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+      "content-top"
+      "content-bottom";
+    background-image: url("../../images/DSC_0422.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+  }
+
+  #daily-choice {
+    grid-area: content-top;
+    text-align: center;
+    width: 50%;
+    justify-self: center;
+    color: #fff;
+  }
+
+  .content-inner {
+    grid-area: content-bottom;
+    display: block;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 20px;
+    align-self: center;
+    justify-self: center;
+    border: 1px solid white;
+  }
+
+  .blogbox {
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font: 14px/1.4 Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+  }
+
+  .our-choice {
+    height: fit-content;
+    margin-bottom: 10px;
+  }
+}
