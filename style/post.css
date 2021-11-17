@@ -33,6 +33,49 @@
   height: fit-content;
 }
 
+.post-main {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+}
+
+.post-text {
+  width: 90%;
+  align-self: top;
+}
+
+.author-card {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 40% 60%;
+  grid-template-areas: 
+  "card-top-left card-top-right"
+  "card-bottom card-bottom";
+  width: 230px;
+  height: fit-content;
+  margin: 15px 0 0 20px;
+  padding: 0 5px 0 5px;
+  border: 1px solid #000;
+}
+
+.author-short-info {
+  grid-area: card-top-left;
+}
+
+.author-foto {
+  grid-area: card-top-right;
+}
+
+.author-bio {
+  grid-area: card-bottom;
+}
+
+.author-info {
+  font: 12px Palatino, Georgia, serif;
+  text-align: left;
+  hyphens: auto;
+}
+
 .by-writer {
   font: 14px Palatino, Georgia, serif;
   text-align: center;
@@ -58,6 +101,35 @@ blockquote {
 }
 
 /* MEDIA QUERIES */
+
+@media (max-width: 699px) {
+  .post-main {
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  .post-text {
+    width: 100%;
+    align-self: top;
+  }
+
+  .author-card {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: 
+    "card-top-left card-top-right"
+    "card-bottom card-bottom";
+    width: 230px;
+    height: fit-content;
+    margin: 0;
+    padding: 0 5px 0 5px;
+    border: 1px solid #000;
+  }
+}
 
 @media (min-width: 900px) {
   blockquote {
@@ -113,11 +185,6 @@ blockquote {
     display: block;
     height: 80%;
   }
-
-  .columns {
-    column-count: 3;
-    column-gap: 20px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -156,10 +223,5 @@ blockquote {
     grid-template-areas: /**/
       "hd" /**/
       "main";
-  }
-
-  .columns {
-    column-count: 4;
-    column-gap: 20px;
   }
 }
