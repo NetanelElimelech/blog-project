@@ -3,7 +3,7 @@
 
 .container {
   display: grid;
-  width: fit-content;
+  width: 90%;
   height: fit-content;
   margin: auto;
   padding: 15px;
@@ -29,7 +29,13 @@
 }
 
 .post {
-  display: block;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "quote quote quote"
+  "post-main post-main post-main"
+  "ft ft ft";
   height: fit-content;
 }
 
@@ -39,6 +45,7 @@
 }
 
 blockquote {
+  grid-area: quote;
   display: block;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -47,7 +54,15 @@ blockquote {
   font: 20px Palatino, Georgia, serif;
 }
 
+.columns {
+  grid-area: post-main;
+  
+  column-count: 1;
+  column-gap: 20px;
+}
+
 .social-sharing {
+  grid-area: ft;
   display: flex;
   align-items: top;
   justify-items: baseline;
@@ -78,7 +93,7 @@ blockquote {
 @media (min-width: 1100px) {
   .container {
     display: grid;
-    width: fit-content;
+    width: 90%;
     margin: auto;
     padding: 15px;
     justify-content: center;
@@ -120,32 +135,10 @@ blockquote {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .container {
     display: grid;
-    width: fit-content;
-    margin: auto;
-    padding: 15px;
-    border: 1.5px solid #000;
-    justify-content: center;
-    grid-template-rows: 100px 1fr;
-    grid-gap: 15px;
-    grid-auto-rows: minmax(50px, auto);
-    grid-template-areas: /**/
-      "hd" /**/
-      "main";
-  }
-  
-  .columns {
-    column-count: 3;
-    column-gap: 20px;
-  }
-}
-
-@media (min-width: 1500px) {
-  .container {
-    display: grid;
-    width: fit-content;
+    width: 90%;
     margin: auto;
     padding: 15px;
     border: 1.5px solid #000;
