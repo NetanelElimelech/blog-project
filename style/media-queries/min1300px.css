@@ -6,6 +6,7 @@
       margin: auto;
       padding: 15px;
       border: 1px solid #000;
+      border-radius: 10px;
       justify-content: center;
       grid-template-rows: 90px fit-content;
       grid-gap: 15px;
@@ -25,6 +26,7 @@
       align-items: center;
       justify-self: center;
       border: 1px solid white;
+      border-radius: 10px;
     }
   
     .blogbox {
@@ -35,6 +37,7 @@
       margin: 0 60px 0 60px;
       padding: 0 20px 20px 20px;
       border: 1px solid #000;
+      border-radius: 10px;
       background-color: #fff;
       font: 14px/1.4 Verdana, Geneva, Tahoma, sans-serif;
       text-align: justify;

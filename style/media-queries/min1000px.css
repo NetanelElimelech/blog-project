@@ -47,6 +47,7 @@
     align-self: center;
     justify-self: center;
     border: 1px solid white;
+    border-radius: 10px;
   }
 
   .blogbox {
@@ -56,6 +57,7 @@
     height: fit-content;
     padding: 20px;
     border: 1px solid #000;
+    border-radius: 10px;
     background-color: #fff;
     font: 14px/1.4 Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;

@@ -8,6 +8,7 @@
   margin: auto;
   padding: 15px;
   border: 1px solid #000;
+  border-radius: 10px;
   grid-template-rows: 10% fit-content;
   grid-gap: 15px;
   grid-auto-rows: minmax(50px, auto);
@@ -23,6 +24,7 @@
   height: fit-content;
   padding: 20px;
   border: 1px solid #000;
+  border-radius: 10px;
   background-color: #fff;
   font: 14px/1.4 Verdana, Geneva, Tahoma, sans-serif;
   text-align: justify;
@@ -56,6 +58,7 @@
   margin: 15px 0 0 20px;
   padding: 0 5px 0 5px;
   border: 1px solid #000;
+  border-radius: 10px;
 }
 
 .author-short-info {
@@ -128,6 +131,7 @@ blockquote {
     margin: 0;
     padding: 0 5px 0 5px;
     border: 1px solid #000;
+    border-radius: 10px;
   }
 }
 
@@ -176,6 +180,7 @@ blockquote {
     margin: 0 60px 0 60px;
     padding: 0 20px 20px 20px;
     border: 1px solid #000;
+    border-radius: 10px;
     background-color: #fff;
     font: 14px/1.4 Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
@@ -194,6 +199,7 @@ blockquote {
     margin: auto;
     padding: 15px;
     border: 1.5px solid #000;
+    border-radius: 10px;
     justify-content: center;
     grid-template-rows: 100px 1fr;
     grid-gap: 15px;
@@ -216,6 +222,7 @@ blockquote {
     margin: auto;
     padding: 15px;
     border: 1.5px solid #000;
+    border-radius: 10px;
     justify-content: center;
     grid-template-rows: 100px 1fr;
     grid-gap: 15px;

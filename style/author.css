@@ -15,6 +15,7 @@
     margin: auto;
     padding: 15px;
     border: 1px solid #000;
+    border-radius: 10px;
     justify-content: center;
     grid-template-columns: 1fr;
     grid-template-rows: 100px fit-content;
@@ -64,6 +65,7 @@
     margin: auto;
     padding: 15px;
     border: 1px solid #000;
+    border-radius: 10px;
     justify-content: center;
     grid-template-columns: 1fr;
     grid-template-rows: 100px fit-content;
@@ -111,6 +113,7 @@
     margin: auto;
     padding: 15px;
     border: 1px solid #000;
+    border-radius: 10px;
     grid-template-rows: 10% fit-content;
     grid-gap: 15px;
     grid-auto-rows: minmax(50px, auto);
